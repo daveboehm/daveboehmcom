@@ -1,6 +1,116 @@
-@primary: #ff0032;
+@primary: #67cd88;
 @white: #fff;
+@gray: #777;
+@light-gray: #cbcbcb;
+@dark-gray: #393939;
 
-body {
+@text-color: @gray;
+* {font-family: 'Zilla Slab', 'Avenir', 'Helvetica Nueue', sans-serif;}
+body, html {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    color: @primary;
+}
+
+h2 {
+    margin: 0 0 10px;
+    padding: 0 0 10px;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: @dark-gray;
+    border-bottom: 1px solid @primary;
+}
+
+h3 {
+    margin: 0 0 5px -20px;
+    padding: 0;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: @dark-gray;
+}
+h6 {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-weight: normal;
+    text-transform: Capitalize;
+    color: @dark-gray;
+}
+
+p, ul li {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: @text-color;
+    font-weight: lighter;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid @primary;
+    margin: 20px 0;
+}
+
+.btn {
     background-color: @primary;
+    padding: 10px;
+    color: @white;
+    border-radius: 2px;
+    text-decoration: none;
+    display: inline-block;
+    & + .btn {
+        margin-left: 20px;
+    }
+    &:hover, &:focus {
+        background-color: @primary * .9;
+    }
+}
+.image {
+    width: 100%;
+    display: block;
+    margin: 20px 0;
+}
+.section {
+    width: 100%;
+    max-width: 740px;
+    margin: 40px auto;
+}
+
+.job {
+    padding-left: 20px;
+    & + .job {
+        margin-top: 20px;
+    }
+}
+
+.school + .school {
+    margin-top: 10px;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+}
+.italics {
+    font-style: italic;
+}
+.projectTitle, .toolsTitle {
+    font-weight: bold;
+}
+.projectDescription, .toolsDescription {
+    margin: 0;
 }

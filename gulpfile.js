@@ -2,7 +2,11 @@ var path = require('path');
 var gulp = require('gulp');
 var less = require('gulp-less');
 var webserver = require('gulp-webserver');
- 
+var concat = require('gulp-concat');
+var livereload = require('gulp-livereload');
+
+livereload({ start: true })
+
 gulp.task('webserver', function() {
   gulp.src('./')
     .pipe(webserver({
@@ -10,15 +14,17 @@ gulp.task('webserver', function() {
       directoryListing: true,
       open: false,
       port: 8080
-    }));
-});
-
-gulp.task('less', function () {
-  return gulp.src('./less/**/*.less')
-    .pipe(less({
-      paths: [ path.join(__dirname, 'less', 'includes') ]
     }))
-    .pipe(gulp.dest('./css'));
+    .pipe(livereload());
 });
 
-gulp.task('default', ['less', 'webserver' ]);
+gulp.task('dev', () => {
+    return gulp.src('./less/**/*.less')
+        .pipe(less({
+            paths: [ path.join(__dirname, 'less', 'includes') ]
+        }))
+        .pipe(concat('daveboehm.css'))
+        .pipe(gulp.dest('./css'))
+});
+
+gulp.task('default', ['dev', 'webserver']);

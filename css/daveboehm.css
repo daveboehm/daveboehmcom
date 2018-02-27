@@ -1,3 +1,107 @@
-body {
-  background-color: #ff0032;
+* {
+  font-family: 'Zilla Slab', 'Avenir', 'Helvetica Nueue', sans-serif;
+}
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  font-weight: lighter;
+  text-transform: uppercase;
+  color: #67cd88;
+}
+h2 {
+  margin: 0 0 10px;
+  padding: 0 0 10px;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #393939;
+  border-bottom: 1px solid #67cd88;
+}
+h3 {
+  margin: 0 0 5px -20px;
+  padding: 0;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #393939;
+}
+h6 {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: Capitalize;
+  color: #393939;
+}
+p,
+ul li {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #777;
+  font-weight: lighter;
+}
+hr {
+  border: none;
+  border-top: 1px solid #67cd88;
+  margin: 20px 0;
+}
+.btn {
+  background-color: #67cd88;
+  padding: 10px;
+  color: #fff;
+  border-radius: 2px;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn + .btn {
+  margin-left: 20px;
+}
+.btn:hover,
+.btn:focus {
+  background-color: #5db97a;
+}
+.image {
+  width: 100%;
+  display: block;
+  margin: 20px 0;
+}
+.section {
+  width: 100%;
+  max-width: 740px;
+  margin: 40px auto;
+}
+.job {
+  padding-left: 20px;
+}
+.job + .job {
+  margin-top: 20px;
+}
+.school + .school {
+  margin-top: 10px;
+}
+.columns {
+  display: flex;
+  justify-content: space-between;
+}
+.columns ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.italics {
+  font-style: italic;
+}
+.projectTitle,
+.toolsTitle {
+  font-weight: bold;
+}
+.projectDescription,
+.toolsDescription {
+  margin: 0;
 }
