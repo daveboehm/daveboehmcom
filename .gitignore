@@ -1,3 +1,4 @@
 node_modules
 .vscode
 .gulp-scss-cache
+.DS_Store
